@@ -3,7 +3,7 @@
 # jQuery
 
 ---
-@title[Why jQuery]
+@title[jQuery ???]
 
 ###### jQuery é uma biblioteca que torna a manipulação de elementos, adição/remoção de eventos, animação e ajax muito mais simples. Tem uma API simples e funciona nos mais variados browsers.
 
@@ -12,26 +12,36 @@
 +++
 @title[Sample Block]
 
-```python
-from time import localtime
 
-activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
-              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
-
-time_now = localtime()
-hour = time_now.tm_hour
-
-for activity_time in sorted(activities.keys()):
-    if hour < activity_time:
-        print activities[activity_time]
-        break
-else:
-    print 'Unknown, AFK or sleeping!'
+```javascript
+var hiddenBox = document.getElementById("banner-message");
+var button = document.querySelector("#button-container button");
+button.addEventListener( "click", function( event ) {
+  hiddenBox.style.display = "";
+});
 ```
 
-###### Code-blocks let you present any <p> **static code** with auto-syntax highlighting
+```javascript
+var hiddenBox = $( "#banner-message" );
+$( "#button-container button" ).on( "click", function( event ) {
+  hiddenBox.show();
+});
+```
 
 ---
+
+### O jQuery permite o encadeamento de métodos para o mesmo alvo:
+
+```javascript
+$("#p1").css("color", "red")
+    .slideUp(2000)
+    .css("height", "auto")
+    .show();
+```
+#### Os métodos **css**, **slideUp** e **show** - ainda veremos o que cada um faz, são aplicados todos no elemento com o id **p1**
+---
+
+
 
 ### Code-Blocks
 ##### Using
