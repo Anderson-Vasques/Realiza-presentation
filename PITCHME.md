@@ -10,7 +10,7 @@
 ![Press Down Key](assets/down-arrow.png)
 
 +++
-@title[Sample Block]
+@title[javascritp x jQuery]
 
 
 ```javascript
@@ -28,7 +28,7 @@ $( "#button-container button" ).on( "click", function( event ) {
 });
 ```
 
----
++++
 
 ### O jQuery permite o encadeamento de métodos para o mesmo alvo:
 
@@ -39,40 +39,24 @@ $("#p1").css("color", "red")
     .show();
 ```
 #### Os métodos **css**, **slideUp** e **show** - ainda veremos o que cada um faz, são aplicados todos no elemento com o id **p1**
+
+
 ---
 
-
-
-### Code-Blocks
-##### Using
-#### **Code-Presenting**
+### Efeitos
 
 ![Press Down Key](assets/down-arrow.png)
 
 +++
-@title[Sample Code Presenting]
+@title[hide/how efect]
 
-```python
-from time import localtime
-
-activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
-              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
-
-time_now = localtime()
-hour = time_now.tm_hour
-
-for activity_time in sorted(activities.keys()):
-    if hour < activity_time:
-        print activities[activity_time]
-        break
-else:
-    print 'Unknown, AFK or sleeping!'
+```javascript
+var paragraphs = $('p');
+paragraphs.hide();
 ```
 
-@[1]
-@[3-4]
-@[6-7]
-@[9-14]
+@[1](Selecionar todos as tags **p** do documento)
+@[2](Esconder todos as tags **p**. O jQuery modifica o estilo do elemento adicionando um atributo **style** e adiciona o valor **none** para a propriedade **display**)
 
 ###### Use code-presenting to **step-thru** code <p> from directly within your presentation 
 
