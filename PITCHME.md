@@ -50,15 +50,15 @@ $("#p1").css("color", "red")
 +++
 @title[hide/how efect]
 
+###### Escondendo elementos com o método **hide()**
+
 ```javascript
 var paragraphs = $('p');
 paragraphs.hide();
 ```
 
 @[1](Selecionar todos as tags **p** do documento)
-@[2](Esconder todos as tags **p**. O jQuery modifica o estilo do elemento adicionando um atributo **style** e adiciona o valor **none** para a propriedade **display**)
-
-###### Use code-presenting to **step-thru** code <p> from directly within your presentation 
+@[2](Esconder todas as tags **p**. O jQuery modifica o estilo do elemento adicionando um atributo **style** e adiciona o valor **none** para a propriedade **display**)
 
 
 ---
