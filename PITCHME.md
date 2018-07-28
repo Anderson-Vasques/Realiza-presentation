@@ -318,8 +318,55 @@ var box = $(".box");
 @[3](Disparando animação no elemento de id **container**.)
 @[4-6](Adicionando evento de click no elemento de id **stop-animation**. Dessa maneira animação será encerrada no momento em que o button for clicado.)
 @[5](Parando animação. O elemento vai ficar no estado que estava quando o button foi clicado.)
----
 
+---
+### HTML
+
+![Press Down Key](assets/down-arrow.png)
+
+
++++
+@title[text method]
+##### o jQuery possui métodos para interagir com o DOM. Com jQuery é possivel adicionar, editar e remover texto, elementos e atributos.
+
++++
+@title[text method]
+###### Para adicionar ou pegar o texto de um elemento podemos utilizar o método text.
+
++++
+@title[text method get mode]
+```html
+...
+<p id="paragraph">Hello World</p>
+...
+```
+
+```javascript
+var paragraph = $('#paragraph');
+console.log(paragraph.text());
+```
+@[1](Selecioar o elemento com id **paragraph**.)
+@[2](O texto **Hello World** será exibido no console.)
+
++++
+@title[text method get mode 2]
+```html
+...
+<p id="paragraph">
+    Hello World
+    <a target="_blank" href="http://wwww.google.com"> Acesse o google</a>
+</p>
+...
+```
+
+```javascript
+var paragraph = $('#paragraph');
+console.log(paragraph.text());
+```
+@[1](Selecioar o elemento com id **paragraph**.)
+@[2](O texto **Hello World Acesse o google** será exibido no console.)
+
+---
 ### Code-Blocks
 ##### Using
 #### Code-Presenting
