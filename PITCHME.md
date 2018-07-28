@@ -489,6 +489,57 @@ resultará em
 ...
 ```
 
++++
+@title[attr]
+### É possivel acessar os atributos dos elementos com o método attr. O método, em suas formas mais simples, aceita como parametros um objeto ou duas strings
+
+```html
+...
+<a id="pudim" href="http://www.pudim.com.br">O melhor site de todos os tempos</a>
+...
+```
+
++++
+@title[attr continued]
+Ao passar somente uma string, o método retornará o valor do atributo.
+
+```javascript
+var pudimLinkElement = $('#pudim');
+console.log(pudimLinkElement.attr('href'));
+```
+@[1](Selecionando o elemento e armazenando-o em uma variável.)
+@[2](Mostrando no navegador a string **http://www.pudim.com.br**.)
+
++++
+@title[attr object example html]
+Também é possivel adicionar ou modificar um ou mais attributos de um elemento
+```html
+...
+<a id="pudim" href="http://www.pudim.com.br">O melhor site de todos os tempos</a>
+...
+```
+
++++
+@title[attr object example javascript]
+```javascript
+var pudimLinkElement = $('#pudim');
+pudimLinkElement.attr('href', 'http://instantrimshot.com/');
+pudimLinkElement.attr({
+        target: '_blank',
+        title: 'Acesse aqui'
+    });
+```
+@[2](Trocando o valor do atributo href por http://instantrimshot.com/.)
+@[3-6](Também é possivel adicionar ou modificar mais de um atibuto ao mesmo tempo. Nesse caso passamos um objeto onde a chave vai ser o nome do atributo e o valor será seu novo valor.)
+
+
++++
+@title[attr object example result]
+
+###### o resultado será:
+```html
+<a id="pudim" target="_blank" title="Acesse aqui" href="http://instantrimshot.com/">O melhor site de todos os tempos</a>
+```
 
 ---
 
