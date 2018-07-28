@@ -106,12 +106,12 @@ container.show(1000, function() {
 @[1](Selecionar o elemento com id **container**)
 @[2-4](Mostrar o elemento com id **container**. o jQuery exibirá o elemento com width:0, height:0 e opacity:0, e aumentará esses valores progressivamente em 1 segundo. Ao final do efeito a mensagem **O efeito terminou!!!** será exibida no console.)
 
-***
++++
 @title[toggle efect with or without time explained]
 ###### O método toggle serve para alternar entre os estados de show e hide. Assim como os métodos já comentados, toggle aceita dois parâmetros (que são opcionais): um tempo e uma função para ser chamada ao final do efeito
 
 
-***
++++
 @title[toggle efect without time ]
 
 ```javascript
@@ -123,7 +123,7 @@ container.toggle();
 @[2-4](Se o elemento estiver sendo exibido ele será escondido. Se o elemento não estiver visível ele será escondido. Como o parmetro de tempo não foi definidi, a troca entre os estados ocorrerá instantaneamente)
 
 
-***
++++
 @title[toggle efect without time ]
 
 ```javascript
@@ -136,6 +136,45 @@ container.toggle(1000, function() {
 @[1](Selecionar o elemento com id **container**.)
 @[2-4](Alterar entre o estado **hide** e **show** aplicando o respectivo efeito. Ao final do efeito a mensagem **O efeito terminou!!!** deve ser exibida no console.)
 
+***
+@title[fadeIn fadeOut fadeToggle ]
+### fadeIn, fadeOut, fadeToggle
+
+***
+@title[fadeIn fadeOut fadeToggle explained ]
+###### A familia de métodos fade aplica um efeito de 'esvanecer' e tem a mesma assinatura dos metodos show/hide/toggle.
+###### Nessa animação apenas a opacidade e o display do elemento mudam.
+
+***
+@title[fadeOut example ]
+
+```javascript
+var container = $('#container');
+container.fadeOut();
+```
+@[2](O elemento com id **container** terá sua opacidade reduzida a 0 em 400 milesegundos - tempo padrão caso nenhum outro valor seja especificado. Após 400 milesegundos, quando o elemento estiver com a **opacidade** igual a 0, o valor da propriedade é modificado para none em um atributo **style**.)
+
+***
+@title[fadeIn example ]
+
+```javascript
+var container = $('#container');
+container.fadeIn(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+@[2-4](O **display** do elemento será modificado da mesma maneira que no método **show**. Após isso a **opacidade** será aumentada progressivamente do valor atual até 1 em 1 segundo, e então a mensagem **O efeito terminou!!!'** será exibida no console.)
+
+***
+@title[fadeToggle example ]
+
+```javascript
+var container = $('#container');
+container.fadeToggle(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+@[2-4](O estado irá alternar entre fadeIn e fadeOut, com animação de 1 segundo. Após o termino da animação a mensagem **O efeito terminou!!!'** será exibida no console.)
 
 ---
 
