@@ -75,7 +75,7 @@ container.hide(1000, function() {
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função. O tempo percorrido do inicio ao fim do efeito será de 1 segundo.
+@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual - o valor é 1 por padrão -,  o width atual será decrescido até 0 - ou min-width, se aplicável - e o height a atual será decrescido até 0 - ou min-height, se aplicável. Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função. O tempo percorrido do inicio ao fim do efeito será de 1 segundo.)
 
 +++
 @title[show efect]
@@ -104,7 +104,7 @@ container.show(1000, function() {
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2-4](Mostrar o elemento com id **container**. o jQuery exibirá o elemento com width:0, height:0 e opacity:0, e aumentará esses valores progressivamente em 1 segundo. Ao final do efeito a mensagem **O efeito terminou!!!** será exibida no console.
+@[2-4](Mostrar o elemento com id **container**. o jQuery exibirá o elemento com width:0, height:0 e opacity:0, e aumentará esses valores progressivamente em 1 segundo. Ao final do efeito a mensagem **O efeito terminou!!!** será exibida no console.)
 
 ***
 @title[toggle efect with or without time explained]
@@ -133,8 +133,8 @@ container.toggle(1000, function() {
 });
 ```
 
-@[1](Selecionar o elemento com id **container**)
-@[2-4](Alterar entre o estado **hide** e **show** aplicando o respectivo efeito. Ao final do efeito a mensagem **O efeito terminou!!!** deve ser exibida no console.
+@[1](Selecionar o elemento com id **container**.)
+@[2-4](Alterar entre o estado **hide** e **show** aplicando o respectivo efeito. Ao final do efeito a mensagem **O efeito terminou!!!** deve ser exibida no console.)
 
 
 ---
