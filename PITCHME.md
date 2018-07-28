@@ -265,7 +265,56 @@ var box = $(".box");
         });
 ```
 
++++
+@title[animate chain explained]
+###### Quando a primeira fase da animação for concluída, a segunda fase começará. Ao final da segunda fase, a terceira fase será iniciada...
 
+
++++
+@title[stop]
+#### O método stop serve para parar um efeito ou animação em um ou mais elementos. A animação do elemento selecionado encerrará no momento em o método stop for executado.
+###### Esse método funciona com todos efeitos vistos até agora.
+
++++
+@title[stop example]
+
+```html
+    <div id="container"></div>
+    <button id="stop-efect">Interromper efeito</button>
+```
+
+```javascript
+    var container = $('#container');
+    var button = $('#stop-efect');
+   
+    container.fadeOut(10000);
+    button.on('click', function() {
+        container.stop();
+    });
+```
+@[4](Disparando efeito de fadeOut no elemento de id **container**.)
+@[5-7](Adicionando evento de click no elemento de id **stop-efect**. Dessa maneira o efeito será encerrado no momento em que o button for clicado.)
+@[6](Parando o efeito de fadeOut.)
+
++++
+@title[stop animation example]
+```html
+    <div id="container"></div>
+    <button id="stop-animation">Interromper animação</button>
+```
+
+```javascript
+    var container = $('#container');
+    var button = $('#stop-animation');
+   
+    container.animate({left: '400px'}, 10000);
+    button.on('click', function() {
+        container.stop();
+    });
+```
+@[4](Disparando animação no elemento de id **container**.)
+@[5-7](Adicionando evento de click no elemento de id **stop-animation**. Dessa maneira animação será encerrada no momento em que o button for clicado.)
+@[6](Parando animação. O elemento vai ficar no estado que estava quando o button foi clicado.)
 ---
 
 ### Code-Blocks
