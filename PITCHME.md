@@ -478,7 +478,7 @@ Hello World
 var paragraph = $('#paragraph');
 console.log(paragraph.text('<span>Esse texto foi adicionado via javascript<span>'));
 ```
-@[2](O conteúdo do elemento selecionado será substituido por **<span>Esse texto foi adicionado via javascript<span>**.)
+@[2](O conteúdo do elemento selecionado será substituido.)
 
 +++
 @title[html method set mode html result]
