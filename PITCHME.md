@@ -449,7 +449,15 @@ paragraph.text("Esse texto foi adicionado via javascript");
 var paragraph = $('#paragraph');
 console.log(paragraph.html());
 ```
-@[2](A seguinte mensagem deve aparecer no console: **Hello World <a target="_blank" href="http://wwww.google.com">Acesse o google</a>**)
+@[2](A seguinte mensagem deve aparecer no console:)
+
++++
+
+```html
+@title[html method get mode result]
+Hello World 
+ <a target="_blank" href="http://wwww.google.com">Acesse o google</a>
+```
 
 
 +++
