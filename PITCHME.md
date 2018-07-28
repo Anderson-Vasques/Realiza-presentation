@@ -244,6 +244,28 @@ box.animate(
 @[3-7](Objeto com as propriedades css que devem ser modificadas até o fim da animação.)
 @[8](Tempo de duração da animação.)
 @[9-11](Função que vai ser executada quando a animação terminar.)
+
++++
+@title[animate chain]
+Diferentente dos outros efeitos vistos até agora, o método animate pode ser encadeado.
+
+```javascript
+var box = $(".box");
+        box.animate({height: '300px',opacity: '0.4'}, "slow", function() {
+            console.log('primeira fase completa')
+        });
+        box.animate({width: '300px', opacity: '0.8'}, 800, function() {
+            console.log('segunda fase completa')
+        });
+        box.animate({height: '100px', opacity: '0.4'}, "slow",function() {
+            console.log('terceira fase completa')
+        });
+        box.animate({width: '100px', opacity: '0.8'}, "slow",function() {
+            console.log('quarta fase completa')
+        });
+```
+
+
 ---
 
 ### Code-Blocks
