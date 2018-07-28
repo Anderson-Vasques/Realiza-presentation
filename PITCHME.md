@@ -61,9 +61,11 @@ paragraphs.hide();
 @[2](Esconder todas as tags **p**. O jQuery modifica o estilo do elemento adicionando um atributo **style** e adiciona o valor **none** para a propriedade **display**)
 
 +++
-@title[hide/show efect with time]
-
+@title[hide/show efect with time - explained]
 ###### O método hide (asssim como o método show e o método toggle) aceita dois parâmetros. O primeiro é o tempo (em milesegundos) que a animação vai durar. O segundo é uma função que vai ser chamada assim que a animação terminar.
+
++++
+@title[hide/show efect with time]
 
 ```javascript
 var container = $('#container');
@@ -74,6 +76,17 @@ container.hide(1000, function() {
 
 @[1](Selecionar o elemento com id **container**)
 @[2](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função
+
++++
+@title[hide/show efect with time - continued]
+```javascript
+var container = $('#container');
+container.hide(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+
+@[1](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função
 
 +++
 @title[show efect]
