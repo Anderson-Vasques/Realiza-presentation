@@ -75,7 +75,7 @@ container.hide(1000, function() {
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual - o valor é 1 por padrão -,  o width atual será decrescido até 0 - ou min-width, se aplicável - e o height a atual será decrescido até 0 - ou min-height, se aplicável. Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função. O tempo percorrido do inicio ao fim do efeito será de 1 segundo.)
+@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual - o valor é 1 por padrão -, o width atual será decrescido até 0 - ou min-width, se aplicável - e o height atual será decrescido até 0 - ou min-height, se aplicável. Após isso, o jQuery adicionará o valor **none** para a propriedade **display** do elemento e em seguida executará a função de callback. O tempo percorrido do inicio ao fim do efeito será de 1 segundo.)
 
 +++
 @title[show efect]
@@ -86,7 +86,7 @@ var paragraphs = $('p');
 paragraphs.show();
 ```
 @[1](Selecionar todos as tags **p** do documento)
-@[2](Mostrar todas as tags **p**. O jQuery modifica o estilo do elemento removendo o valor da propriedade **display** caso o ela esteja com o valor **none** no atributo **style**. Caso o elemento já com o estilo **display: none** no css, o jQuery exibe o elemento adicionando o atributo **style="display: block;"**.)
+@[2](Mostrar todas as tags **p**. O jQuery modifica o estilo do elemento removendo o valor da propriedade **display** caso ela esteja com o valor **none** no atributo **style**. Caso o elemento esteja com o estilo **display: none** no css, o jQuery exibe o elemento adicionando o atributo **style="display: block;"**.)
 
 +++
 @title[show efect with time - explained]
@@ -104,7 +104,7 @@ container.show(1000, function() {
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2-4](Mostrar o elemento com id **container**. o jQuery exibirá o elemento com width:0, height:0 e opacity:0, e aumentará esses valores progressivamente em 1 segundo. Ao final do efeito a mensagem **O efeito terminou!!!** será exibida no console.)
+@[2-4](Mostrar o elemento com id **container**. O jQuery exibirá o elemento com width:0, height:0 e opacity:0, e aumentará esses valores progressivamente em 1 segundo. Ao final do efeito a mensagem **O efeito terminou!!!** será exibida no console.)
 
 +++
 @title[toggle efect with or without time explained]
@@ -183,7 +183,7 @@ container.fadeToggle(1000, function() {
 +++
 @title[slideUp slideDown slideToggle explained ]
 ###### A familia de métodos slide aplica um efeito de expandir ou recolher e tem a mesma assinatura dos metodos show/hide/toggle.
-###### Nessa animação apenas a altura e o display do elemento mudam. A altura é modificada progressivamente durante a animação;
+###### Nessa animação apenas a altura e o display do elemento mudam. A altura é modificada progressivamente durante a animação.
 
 +++
 @title[slideUp example ]
