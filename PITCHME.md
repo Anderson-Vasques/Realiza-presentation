@@ -75,7 +75,7 @@ container.hide(1000, function() {
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função. O tempo percorrido do inicio ao fim do efeito será de 1 segundo (1000 milesegundos)
+@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função. O tempo percorrido do inicio ao fim do efeito será de 1 segundo.
 
 +++
 @title[show efect]
@@ -86,14 +86,14 @@ var paragraphs = $('p');
 paragraphs.show();
 ```
 @[1](Selecionar todos as tags **p** do documento)
-@[2](Mostrar todas as tags **p**. O jQuery modifica o estilo do elemento removendo o valor da propriedade **display** caso o ela esteja com o valor **none** no atributo **style**. Caso o elemento já com o estilo **display: none** no css, o jQuery exibe o elemento adicionando o atributo **style="display: block;"**.
+@[2](Mostrar todas as tags **p**. O jQuery modifica o estilo do elemento removendo o valor da propriedade **display** caso o ela esteja com o valor **none** no atributo **style**. Caso o elemento já com o estilo **display: none** no css, o jQuery exibe o elemento adicionando o atributo **style="display: block;"**.)
 
 +++
 @title[show efect with time - explained]
 ###### O método show aceita dois parâmetros. O primeiro é o tempo (em milesegundos - 1000, por exemplo - ou uma string com 'slow' ou 'fast') que a animação vai durar. O segundo é uma função que vai ser chamada assim que a animação terminar.
 
 
-***
++++
 @title[show efect with time]
 
 ```javascript
