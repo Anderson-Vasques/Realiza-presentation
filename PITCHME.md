@@ -62,7 +62,7 @@ paragraphs.hide();
 
 +++
 @title[hide/show efect with time - explained]
-###### O método hide (asssim como o método show e o método toggle) aceita dois parâmetros. O primeiro é o tempo (em milesegundos) que a animação vai durar. O segundo é uma função que vai ser chamada assim que a animação terminar.
+###### O método hide (asssim como o método show e o método toggle) aceita dois parâmetros. O primeiro é o tempo (em milesegundos - 1000, por exemplo - ou uma string com 'slow' ou 'fast') que a animação vai durar. O segundo é uma função que vai ser chamada assim que a animação terminar.
 
 +++
 @title[hide/show efect with time]
@@ -75,18 +75,7 @@ container.hide(1000, function() {
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função
-
-+++
-@title[hide/show efect with time - continued]
-```javascript
-var container = $('#container');
-container.hide(1000, function() {
-    console.log('O efeito terminou!!!');
-});
-```
-
-@[1](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função
+@[2-4](Esconder o elemento com id **container**. O jQuery modificará a opacidade do elemento atual (o valor é 1 por padrão),  o width atual será decrescido até 0 (ou min-width, se aplicável) e o height a atual será decrescido até 0 (ou min-height, se aplicável). Após isso o jQuery adicionaráo valor **none** para a propriedade **display** do elemento e em seguida executará a função. O tempo percorrido do inicio ao fim do efeito será de 1 segundo (1000 milesegundos)
 
 +++
 @title[show efect]
@@ -96,6 +85,57 @@ container.hide(1000, function() {
 var paragraphs = $('p');
 paragraphs.show();
 ```
+@[1](Selecionar todos as tags **p** do documento)
+@[2](Mostrar todas as tags **p**. O jQuery modifica o estilo do elemento removendo o valor da propriedade **display** caso o ela esteja com o valor **none** no atributo **style**. Caso o elemento já com o estilo **display: none** no css, o jQuery exibe o elemento adicionando o atributo **style="display: block;"**.
+
++++
+@title[show efect with time - explained]
+###### O método show aceita dois parâmetros. O primeiro é o tempo (em milesegundos - 1000, por exemplo - ou uma string com 'slow' ou 'fast') que a animação vai durar. O segundo é uma função que vai ser chamada assim que a animação terminar.
+
+
+***
+@title[show efect with time]
+
+```javascript
+var container = $('#container');
+container.show(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+
+@[1](Selecionar o elemento com id **container**)
+@[2-4](Mostrar o elemento com id **container**. o jQuery exibirá o elemento com width:0, height:0 e opacity:0, e aumentará esses valores progressivamente em 1 segundo. Ao final do efeito a mensagem **O efeito terminou!!!** será exibida no console.
+
+***
+@title[toggle efect with or without time explained]
+###### O método toggle serve para alternar entre os estados de show e hide. Assim como os métodos já comentados, toggle aceita dois parâmetros (que são opcionais): um tempo e uma função para ser chamada ao final do efeito
+
+
+***
+@title[toggle efect without time ]
+
+```javascript
+var container = $('#container');
+container.toggle();
+```
+
+@[1](Selecionar o elemento com id **container**)
+@[2-4](Se o elemento estiver sendo exibido ele será escondido. Se o elemento não estiver visível ele será escondido. Como o parmetro de tempo não foi definidi, a troca entre os estados ocorrerá instantaneamente)
+
+
+***
+@title[toggle efect without time ]
+
+```javascript
+var container = $('#container');
+container.toggle(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+
+@[1](Selecionar o elemento com id **container**)
+@[2-4](Alterar entre o estado **hide** e **show** aplicando o respectivo efeito. Ao final do efeito a mensagem **O efeito terminou!!!** deve ser exibida no console.
+
 
 ---
 
