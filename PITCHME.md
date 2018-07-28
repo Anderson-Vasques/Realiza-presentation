@@ -120,7 +120,7 @@ container.toggle();
 ```
 
 @[1](Selecionar o elemento com id **container**)
-@[2-4](Se o elemento estiver sendo exibido ele será escondido. Se o elemento não estiver visível ele será escondido. Como o parmetro de tempo não foi definidi, a troca entre os estados ocorrerá instantaneamente)
+@[2-4](Troca entre show e hide. Se o elemento estiver sendo exibido ele será escondido. Se o elemento não estiver visível ele será exibido. Como o paramâetro de tempo não foi definido, a troca entre os estados ocorrerá instantaneamente)
 
 
 +++
@@ -136,16 +136,16 @@ container.toggle(1000, function() {
 @[1](Selecionar o elemento com id **container**.)
 @[2-4](Alterar entre o estado **hide** e **show** aplicando o respectivo efeito. Ao final do efeito a mensagem **O efeito terminou!!!** deve ser exibida no console.)
 
-***
++++
 @title[fadeIn fadeOut fadeToggle ]
 ### fadeIn, fadeOut e fadeToggle
 
-***
++++
 @title[fadeIn fadeOut fadeToggle explained ]
 ###### A familia de métodos fade aplica um efeito de 'esvanecer' e tem a mesma assinatura dos metodos show/hide/toggle.
 ###### Nessa animação apenas a opacidade e o display do elemento mudam.
 
-***
++++
 @title[fadeOut example ]
 
 ```javascript
@@ -154,7 +154,7 @@ container.fadeOut();
 ```
 @[2](O elemento com id **container** terá sua opacidade reduzida a 0 em 400 milesegundos - tempo padrão caso nenhum outro valor seja especificado. Após 400 milesegundos, quando o elemento estiver com a **opacidade** igual a 0, o valor da propriedade **display** é modificado para **none** em um atributo **style**.)
 
-***
++++
 @title[fadeIn example ]
 
 ```javascript
@@ -165,7 +165,7 @@ container.fadeIn(1000, function() {
 ```
 @[2-4](O **display** do elemento será modificado da mesma maneira que no método **show**. Após isso a **opacidade** será aumentada progressivamente do valor atual até 1 em 1 segundo, e então a mensagem **O efeito terminou!!!'** será exibida no console.)
 
-***
++++
 @title[fadeToggle example ]
 
 ```javascript
@@ -176,16 +176,16 @@ container.fadeToggle(1000, function() {
 ```
 @[2-4](O estado irá alternar entre fadeIn e fadeOut, com animação de 1 segundo. Após o termino da animação a mensagem **O efeito terminou!!!'** será exibida no console.)
 
-***
++++
 @title[slideUp slideDown slideToggle ]
 ### slideUp, slideDown e slideToggle
 
-***
++++
 @title[slideUp slideDown slideToggle explained ]
 ###### A familia de métodos slide aplica um efeito de expandir ou recolher e tem a mesma assinatura dos metodos show/hide/toggle.
 ###### Nessa animação apenas a altura e o display do elemento mudam. A altura é modificada progressivamente durante a animação;
 
-***
++++
 @title[slideUp example ]
 
 ```javascript
@@ -194,7 +194,7 @@ container.slideUp();
 ```
 @[2](O elemento com id **container** terá sua altura reduzida a 0 em 400 milesegundos - tempo padrão caso nenhum outro valor seja especificado. Após 400 milesegundos, o valor da propriedade **display** é modificado para **none** em um atributo **style**.)
 
-***
++++
 @title[slideDown example ]
 
 ```javascript
@@ -205,7 +205,7 @@ container.slideDown(1000, function() {
 ```
 @[2-4](O **display** do elemento será modificado da mesma maneira que no método **show**. Após isso a **altura** será aumentada progressivamente do valor atual até o valor máximo em 1 segundo, e então a mensagem **O efeito terminou!!!'** será exibida no console.)
 
-***
++++
 @title[slideToggle example ]
 
 ```javascript
@@ -216,8 +216,34 @@ container.slideToggle(1000, function() {
 ```
 @[2-4](O estado irá alternar entre slideUp e slideDown, com animação de 1 segundo. Após o termino da animação a mensagem **O efeito terminou!!!'** será exibida no console.)
 
++++
+@title[animate ]
+### Animate
+##### Com o método animate podemos criar animções ao fazer uma transição entre valores de várias propriedades css.
 
++++
+@title[animate explained]
+###### Uma das formas mais simples do método animate recebe 3 parametros. O primeiro é um objeto com as propridades css e seus respectivos valores que a animação irá efetuar,o segundo é um numero ou uma string informando a duração da animação e o terceiro parametro é uma função que vai ser executada quando a animação terminar.
 
++++
+@title[animate example]
+```javascript
+var box = $('#box');
+box.animate(
+    {
+        left: 140,
+        width: '200px',
+        opacity: .5
+    },
+    2000,
+    function() {
+        console.log('Animação concluída');
+    }
+);
+```
+@[3-7](Objeto com as propriedades css que devem ser modificadas até o fim da animação.)
+@[8](Tempo de duração da animação.)
+@[9-11](Função que vai ser executada quando a animação terminar.)
 ---
 
 ### Code-Blocks
