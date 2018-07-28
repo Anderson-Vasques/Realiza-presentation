@@ -326,7 +326,7 @@ var box = $(".box");
 
 
 +++
-@title[text method]
+@title[text html append prepend ... methods]
 ##### o jQuery possui métodos para interagir com o DOM. Com jQuery é possivel adicionar, editar e remover texto, elementos e atributos.
 
 +++
@@ -334,13 +334,14 @@ var box = $(".box");
 ###### Para adicionar ou pegar o texto de um elemento podemos utilizar o método text.
 
 +++
-@title[text method get mode]
+@title[text method get mode html]
 ```html
 ...
 <p id="paragraph">Hello World</p>
 ...
 ```
-
++++
+@title[text method get mode javascript]
 ```javascript
 var paragraph = $('#paragraph');
 console.log(paragraph.text());
@@ -349,7 +350,7 @@ console.log(paragraph.text());
 @[2](O texto **Hello World** será exibido no console.)
 
 +++
-@title[text method get mode 2]
+@title[text method get mode 2 html]
 ```html
 ...
 <p id="paragraph">
@@ -359,12 +360,128 @@ console.log(paragraph.text());
 ...
 ```
 
++++
+@title[text method get mode 2 javascript]
+
 ```javascript
 var paragraph = $('#paragraph');
 console.log(paragraph.text());
 ```
 @[1](Selecioar o elemento com id **paragraph**.)
 @[2](O texto **Hello World Acesse o google** será exibido no console.)
+
++++
+@title[text method set mode]
+### Também é possível adicionar texto em um elemento com o método text, basta passarmos o uma string como parâmetro
+
+
++++
+@title[text method set mode example]
+
+```html
+...
+<p id="paragraph">Hello World</p>
+...
+```
+
+```javascript
+var paragraph = $('#paragraph');
+paragraph.text("Esse texto foi adicionado via javascript");
+```
+
++++
+@title[text method set mode example continued]
+###### Resultará no seguinte: 
+
+```html
+...
+<p id="paragraph">Esse texto foi adicionado via javascript</p>
+...
+```
+
++++
+@title[text method set mode example 2]
+
+```html
+...
+<p id="paragraph">
+    Hello World
+    <a target="_blank" href="http://wwww.google.com">Acesse o google</a>
+</p>
+...
+```
+
+```javascript
+var paragraph = $('#paragraph');
+paragraph.text("Esse texto foi adicionado via javascript");
+```
+
++++
+@title[text method set mode example 2 continued]
+###### Resultará no seguinte: 
+
+```html
+...
+<p id="paragraph">Esse texto foi adicionado via javascript</p>
+...
+```
+
++++
+@title[html method]
+###### Sem quiser pegar o html de dentro de um elemento, basta usar o método html. Também é possivel passar um parâmetro se quiser adicionar conteúdo html para uma página.
+
++++
+
+@title[html method get mode html]
+```html
+...
+<p id="paragraph">
+    Hello World
+    <a target="_blank" href="http://wwww.google.com">Acesse o google</a>
+</p>
+...
+```
+
++++
+@title[html method get mode javascript]
+
+```javascript
+var paragraph = $('#paragraph');
+console.log(paragraph.html());
+```
+@[2](A seguinte mensagem deve aparecer no console: **Hello World <a target="_blank" href="http://wwww.google.com">Acesse o google</a>**)
+
+
++++
+@title[html method set html]
+```html
+...
+<p id="paragraph">
+    Hello World
+    <a target="_blank" href="http://wwww.google.com">Acesse o google</a>
+</p>
+...
+```
+
++++
+@title[html method set mode javascript]
+
+```javascript
+var paragraph = $('#paragraph');
+console.log(paragraph.text('<span>Esse texto foi adicionado via javascript<span>'));
+```
+@[2](O conteúdo do elemento selecionado será substituido por **<span>Esse texto foi adicionado via javascript<span>**.)
+
++++
+@title[html method set mode html result]
+
+```html
+...
+<p id="paragraph">
+    <span>Esse texto foi adicionado via javascript<span>
+</p>
+...
+
 
 ---
 ### Code-Blocks
