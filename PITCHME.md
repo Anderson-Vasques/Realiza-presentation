@@ -476,7 +476,7 @@ Hello World
 
 ```javascript
 var paragraph = $('#paragraph');
-console.log(paragraph.text('<span>Esse texto foi adicionado via javascript<span>'));
+paragraph.html('<span>Esse texto foi adicionado via javascript<span>');
 ```
 
 resultará em
