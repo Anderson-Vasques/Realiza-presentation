@@ -138,7 +138,7 @@ container.toggle(1000, function() {
 
 ***
 @title[fadeIn fadeOut fadeToggle ]
-### fadeIn, fadeOut, fadeToggle
+### fadeIn, fadeOut e fadeToggle
 
 ***
 @title[fadeIn fadeOut fadeToggle explained ]
@@ -152,7 +152,7 @@ container.toggle(1000, function() {
 var container = $('#container');
 container.fadeOut();
 ```
-@[2](O elemento com id **container** terá sua opacidade reduzida a 0 em 400 milesegundos - tempo padrão caso nenhum outro valor seja especificado. Após 400 milesegundos, quando o elemento estiver com a **opacidade** igual a 0, o valor da propriedade é modificado para none em um atributo **style**.)
+@[2](O elemento com id **container** terá sua opacidade reduzida a 0 em 400 milesegundos - tempo padrão caso nenhum outro valor seja especificado. Após 400 milesegundos, quando o elemento estiver com a **opacidade** igual a 0, o valor da propriedade **display** é modificado para **none** em um atributo **style**.)
 
 ***
 @title[fadeIn example ]
@@ -175,6 +175,48 @@ container.fadeToggle(1000, function() {
 });
 ```
 @[2-4](O estado irá alternar entre fadeIn e fadeOut, com animação de 1 segundo. Após o termino da animação a mensagem **O efeito terminou!!!'** será exibida no console.)
+
+***
+@title[slideUp slideDown slideToggle ]
+### slideUp, slideDown e slideToggle
+
+***
+@title[slideUp slideDown slideToggle explained ]
+###### A familia de métodos slide aplica um efeito de expandir ou recolher e tem a mesma assinatura dos metodos show/hide/toggle.
+###### Nessa animação apenas a altura e o display do elemento mudam. A altura é modificada progressivamente durante a animação;
+
+***
+@title[slideUp example ]
+
+```javascript
+var container = $('#container');
+container.slideUp();
+```
+@[2](O elemento com id **container** terá sua altura reduzida a 0 em 400 milesegundos - tempo padrão caso nenhum outro valor seja especificado. Após 400 milesegundos, o valor da propriedade **display** é modificado para **none** em um atributo **style**.)
+
+***
+@title[slideDown example ]
+
+```javascript
+var container = $('#container');
+container.slideDown(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+@[2-4](O **display** do elemento será modificado da mesma maneira que no método **show**. Após isso a **altura** será aumentada progressivamente do valor atual até o valor máximo em 1 segundo, e então a mensagem **O efeito terminou!!!'** será exibida no console.)
+
+***
+@title[slideToggle example ]
+
+```javascript
+var container = $('#container');
+container.slideToggle(1000, function() {
+    console.log('O efeito terminou!!!');
+});
+```
+@[2-4](O estado irá alternar entre slideUp e slideDown, com animação de 1 segundo. Após o termino da animação a mensagem **O efeito terminou!!!'** será exibida no console.)
+
+
 
 ---
 
