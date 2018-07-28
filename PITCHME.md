@@ -529,8 +529,8 @@ pudimLinkElement.attr({
         title: 'Acesse aqui'
     });
 ```
-@[2](Trocando o valor do atributo por http://instantrimshot.com/.)
-@[3-6](Também é possivel adicionar ou modificar mais de um arquivo ao mesmo tempo. Nesse caso passamos um objeto onde a chave vai ser o nome do atributo e o valor será seu novo valor.)
+@[2](Trocando o valor do atributo href por http://instantrimshot.com/.)
+@[3-6](Também é possivel adicionar ou modificar mais de um atibuto ao mesmo tempo. Nesse caso passamos um objeto onde a chave vai ser o nome do atributo e o valor será seu novo valor.)
 
 
 +++
