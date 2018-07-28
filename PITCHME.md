@@ -276,45 +276,48 @@ var box = $(".box");
 ###### Esse método funciona com todos efeitos vistos até agora.
 
 +++
-@title[stop example]
+@title[stop example html]
 
 ```html
     <div id="container"></div>
     <button id="stop-efect">Interromper efeito</button>
 ```
++++
+@title[stop example javascript]
 
 ```javascript
     var container = $('#container');
     var button = $('#stop-efect');
-   
     container.fadeOut(10000);
     button.on('click', function() {
         container.stop();
     });
 ```
-@[4](Disparando efeito de fadeOut no elemento de id **container**.)
-@[5-7](Adicionando evento de click no elemento de id **stop-efect**. Dessa maneira o efeito será encerrado no momento em que o button for clicado.)
-@[6](Parando o efeito de fadeOut.)
+@[3](Disparando efeito de fadeOut no elemento de id **container**.)
+@[4-6](Adicionando evento de click no elemento de id **stop-efect**. Dessa maneira o efeito será encerrado no momento em que o button for clicado.)
+@[5](Parando o efeito de fadeOut.)
 
 +++
-@title[stop animation example]
+@title[stop animation example html]
 ```html
     <div id="container"></div>
     <button id="stop-animation">Interromper animação</button>
 ```
 
++++
+@title[stop animation example javascript]
+
 ```javascript
     var container = $('#container');
     var button = $('#stop-animation');
-   
     container.animate({left: '400px'}, 10000);
     button.on('click', function() {
         container.stop();
     });
 ```
-@[4](Disparando animação no elemento de id **container**.)
-@[5-7](Adicionando evento de click no elemento de id **stop-animation**. Dessa maneira animação será encerrada no momento em que o button for clicado.)
-@[6](Parando animação. O elemento vai ficar no estado que estava quando o button foi clicado.)
+@[3](Disparando animação no elemento de id **container**.)
+@[4-6](Adicionando evento de click no elemento de id **stop-animation**. Dessa maneira animação será encerrada no momento em que o button for clicado.)
+@[5](Parando animação. O elemento vai ficar no estado que estava quando o button foi clicado.)
 ---
 
 ### Code-Blocks
