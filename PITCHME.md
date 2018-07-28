@@ -493,6 +493,4 @@ resultará em
 ---
 
 ### Aprenda mais:
-###### Links de referência [w3c jquery](https://www.w3schools.com/Jquery/default.asp), [jQuery](https://jquery.com/ )
-###### [CSS](https://www.w3schools.com/css/default.asp) [CSS Maujor](http://www.maujor.com/tutorial/intrtut.php)
-###### [Exemplos](https://github.com/Anderson-Vasques/Realiza-exemplos) e [NOTAS DE AULA](https://github.com/Anderson-Vasques/Realiza-exemplos/blob/master/Notas%20de%20aula.txt)
+###### Links de referência [w3c jquery](https://www.w3schools.com/Jquery/default.asp), [jQuery](https://jquery.com/ ), [CSS](https://www.w3schools.com/css/default.asp), [CSS Maujor](http://www.maujor.com/tutorial/intrtut.php), [Exemplos](https://github.com/Anderson-Vasques/Realiza-exemplos) e [NOTAS DE AULA](https://github.com/Anderson-Vasques/Realiza-exemplos/blob/master/Notas%20de%20aula.txt)
