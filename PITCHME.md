@@ -570,6 +570,134 @@ console.log(inputValue);
 @[5](No console do navegador aparecerá a mensagem **Fulano**.)
 
 +++
+@title[class]
+##### Outro atributo especial é o atributo class. Temos métodos especificos para adicionar classes, remover classes, alternar classes e testar classes
+
++++
+@title[addClass html]
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[addClass javascript]
+
+```javascript
+$('.el').addClass('green');
+$('.circle').addClass('pi ball');
+```
+@[1](Adicionando a classe **green** em todos elementos com classe **el**)
+@[2](Adicionando as classes **pi** e **ball** em todos elementos com classe **circle**)
+
++++
+@title[addClass html result]
+O resultado será uma mudança no html:
+
+```html
+<div class="content">
+    <div class="box el green"></div>
+    <div class="circle el pi ball"></div>
+</div>
+```
+
++++
+@title[removeClass javascript]
+
+```javascript
+$('.el').removeClass('green');
+$('.circle').removeClass('pi ball');
+```
+@[1](Removendo a classe **green** em todos elementos com classe **el**)
+@[2](Removendo as classes **pi** e **ball** em todos elementos com classe **circle**)
+
++++
+@title[removeClass html result]
+O resultado será uma mudança no html:
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[toggleClass]
+###### Podemos alternar as entre remover e adicionar classes com o método toggleClass
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[toggleClass javascript]
+
+```javascript
+$('.el').toggleeClass('green');
+$('.circle').toggleeClass('pi ball');
+```
+
++++
+@title[toggleClass html]
+O resultado será uma mudança no html:
+
+```html
+<div class="content">
+    <div class="box el green"></div>
+    <div class="circle el pi ball"></div>
+</div>
+```
+
++++
+@title[toggleClass javascript 2]
+```javascript
+$('.el').toggleeClass('green');
+$('.circle').toggleeClass('pi ball');
+```
++++
+@title[toggleClass html 2]
+O resultado será uma mudança no html:
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[hasClass]
+###### Podemos testar se um elemento tem uma determinada classe com o método hasClass. O método recebe como parâmetro uma string e retorna true se o elemento tiver uma classe com o mesmo valor da string e false caso contrário.
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el green"></div>
+</div>
+```
+
++++
+@title[hasClass javascript]
+```javascript
+var box = $('.box');
+var isGreen = box.hasClass('green');
+if(isGreen) {
+    console.log('O elemento .box é verde.');
+}else {
+    console.log('O elemento .box NÃO é verde.');
+}
+```
+@[1](Selecionando o elemento com classe **box**.)
+@[2](O elemento não tem a classe **green**, portanto o método **hasClass** retorna **false**. O valor é armazenado na variavel **isGreen**.)
+@[5-7](**isGreen** é false, portanto a somente o que tem no bloco **else** é executado. A mensagem **O elemento .box NÃO é verde.** deve aperecer no console.)
+
++++
 @title[append]
 ###### O método append permite a adição de conteúdo no final de um elemento
 
@@ -603,15 +731,6 @@ O resultado será:
     Esse texto deve aparecer no final da elemento <a href="#"> bem como esse link</a>
 </div>
 ```
-
-
-
-
-
-
-
-
-
 
 +++
 @title[prepend]
@@ -647,15 +766,6 @@ O resultado será:
     <p>Uma tag p</p>
 </div>
 ```
-
-
-
-
-
-
-
-
-
 
 +++
 @title[before]
@@ -696,7 +806,6 @@ Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
 <p>Um parágrafo depois da div</p>
 ```
 
-
 +++
 @title[after]
 ###### O método after permite a adição de conteúdo no depois de um elemento
@@ -735,20 +844,6 @@ O resultado será:
 Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
 <p>Um parágrafo depois da div</p>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ---
 
