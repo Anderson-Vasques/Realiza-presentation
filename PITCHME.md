@@ -569,6 +569,187 @@ console.log(inputValue);
 @[4](Modificando o conteúdo do atributo value do elemento para **Fulano**.)
 @[5](No console do navegador aparecerá a mensagem **Fulano**.)
 
++++
+@title[append]
+###### O método append permite a adição de conteúdo no final de um elemento
+
++++
+@title[append html]
+
+```html
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+```
+
++++
+@title[append javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.append('Esse texto deve aparecer no final da elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo no final da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[append html result]
+
+O resultado será:
+```html
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+    Esse texto deve aparecer no final da elemento <a href="#"> bem como esse link</a>
+</div>
+```
+
+
+
+
+
+
+
+
+
+
++++
+@title[prepend]
+###### O método prepend permite a adição de conteúdo no inicio de um elemento
+
++++
+@title[prepend html]
+
+```html
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+```
+
++++
+@title[prepend javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.prepend('Esse texto deve aparecer no inicio da elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo no inicio da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[prepend html result]
+
+O resultado será:
+```html
+<div id="main-content">
+    Esse texto deve aparecer no inicio da elemento <a href="#"> bem como esse link</a>
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+```
+
+
+
+
+
+
+
+
+
+
++++
+@title[before]
+###### O método before permite a adição de conteúdo no antes de um elemento
+
++++
+@title[before html]
+
+```html
+<p>Um parágrafo antes da div</p>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+<p>Um parágrafo depois da div</p>
+```
+
++++
+@title[before javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.before('Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo no antes da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[before html result]
+
+O resultado será:
+```html
+<p>Um parágrafo antes da div</p>
+Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+<p>Um parágrafo depois da div</p>
+```
+
+
++++
+@title[after]
+###### O método after permite a adição de conteúdo no depois de um elemento
+
++++
+@title[after html]
+
+```html
+<p>Um parágrafo antes da div</p>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+<p>Um parágrafo depois da div</p>
+```
+
++++
+@title[after javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.after('Esse texto deve aparecer depois do elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo depois da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[after html result]
+
+O resultado será:
+```html
+<p>Um parágrafo antes da div</p>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
+<p>Um parágrafo depois da div</p>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ### Aprenda mais:
