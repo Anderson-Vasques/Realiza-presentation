@@ -532,7 +532,6 @@ pudimLinkElement.attr({
 @[2](Trocando o valor do atributo href por http://instantrimshot.com/.)
 @[3-6](Também é possivel adicionar ou modificar mais de um atibuto ao mesmo tempo. Nesse caso passamos um objeto onde a chave vai ser o nome do atributo e o valor será seu novo valor.)
 
-
 +++
 @title[attr object example result]
 
@@ -540,6 +539,35 @@ pudimLinkElement.attr({
 ```html
 <a id="pudim" target="_blank" title="Acesse aqui" href="http://instantrimshot.com/">O melhor site de todos os tempos</a>
 ```
+
++++
+@title[val method]
+#### O método val nos permite pegar ou editar o atributo value de um elemento.
+
++++
+@title[val html example]
+```html
+<div>
+    <form id="nameForm" action="api/sendName">
+        <label for="name">Digite seu nome</label>
+        <input id="name" type="text" name="username" value="Anderson" />
+    </form>
+</div>
+```
++++
+@title[val javascript example]
+```javascript
+var input = $('#name');
+var inputValue = input.val();
+console.log(inputValue);
+input.val('Fulano');
+console.log(inputValue);
+```
+@[1](Selecionando o elemento com id **name**.)
+@[2](Armazenando o conteúdo do atributo value - ou seja, o valor do input - em uma variável.)
+@[3](No console do navegador aparecerá a mensagem **Anderson**.)
+@[4](Modificando o conteúdo do atributo value do elemento para **Fulano**.)
+@[5](No console do navegador aparecerá a mensagem **Fulano**.)
 
 ---
 
