@@ -532,7 +532,6 @@ pudimLinkElement.attr({
 @[2](Trocando o valor do atributo href por http://instantrimshot.com/.)
 @[3-6](Também é possivel adicionar ou modificar mais de um atibuto ao mesmo tempo. Nesse caso passamos um objeto onde a chave vai ser o nome do atributo e o valor será seu novo valor.)
 
-
 +++
 @title[attr object example result]
 
@@ -540,6 +539,326 @@ pudimLinkElement.attr({
 ```html
 <a id="pudim" target="_blank" title="Acesse aqui" href="http://instantrimshot.com/">O melhor site de todos os tempos</a>
 ```
+
++++
+@title[val method]
+#### O método val nos permite pegar ou editar o atributo value de um elemento.
+
++++
+@title[val html example]
+```html
+<div>
+    <form id="nameForm" action="api/sendName">
+        <label for="name">Digite seu nome</label>
+        <input id="name" type="text" name="username" value="Anderson" />
+    </form>
+</div>
+```
++++
+@title[val javascript example]
+```javascript
+var input = $('#name');
+var inputValue = input.val();
+console.log(inputValue);
+input.val('Fulano');
+console.log(inputValue);
+```
+@[1](Selecionando o elemento com id **name**.)
+@[2](Armazenando o conteúdo do atributo value - ou seja, o valor do input - em uma variável.)
+@[3](No console do navegador aparecerá a mensagem **Anderson**.)
+@[4](Modificando o conteúdo do atributo value do elemento para **Fulano**.)
+@[5](No console do navegador aparecerá a mensagem **Fulano**.)
+
++++
+@title[class]
+##### Outro atributo especial é o atributo class. Temos métodos especificos para adicionar classes, remover classes, alternar classes e testar classes
+
++++
+@title[addClass html]
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[addClass javascript]
+
+```javascript
+$('.el').addClass('green');
+$('.circle').addClass('pi ball');
+```
+@[1](Adicionando a classe **green** em todos elementos com classe **el**)
+@[2](Adicionando as classes **pi** e **ball** em todos elementos com classe **circle**)
+
++++
+@title[addClass html result]
+O resultado será uma mudança no html:
+
+```html
+<div class="content">
+    <div class="box el green"></div>
+    <div class="circle el pi ball"></div>
+</div>
+```
+
++++
+@title[removeClass javascript]
+
+```javascript
+$('.el').removeClass('green');
+$('.circle').removeClass('pi ball');
+```
+@[1](Removendo a classe **green** em todos elementos com classe **el**)
+@[2](Removendo as classes **pi** e **ball** em todos elementos com classe **circle**)
+
++++
+@title[removeClass html result]
+O resultado será uma mudança no html:
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[toggleClass]
+###### Podemos alternar as entre remover e adicionar classes com o método toggleClass
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[toggleClass javascript]
+
+```javascript
+$('.el').toggleeClass('green');
+$('.circle').toggleeClass('pi ball');
+```
+
++++
+@title[toggleClass html]
+O resultado será uma mudança no html:
+
+```html
+<div class="content">
+    <div class="box el green"></div>
+    <div class="circle el pi ball"></div>
+</div>
+```
+
++++
+@title[toggleClass javascript 2]
+```javascript
+$('.el').toggleeClass('green');
+$('.circle').toggleeClass('pi ball');
+```
++++
+@title[toggleClass html 2]
+O resultado será uma mudança no html:
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el"></div>
+</div>
+```
+
++++
+@title[hasClass]
+###### Podemos testar se um elemento tem uma determinada classe com o método hasClass. O método recebe como parâmetro uma string e retorna true se o elemento tiver uma classe com o mesmo valor da string e false caso contrário.
+
+```html
+<div class="content">
+    <div class="box el"></div>
+    <div class="circle el green"></div>
+</div>
+```
+
++++
+@title[hasClass javascript]
+```javascript
+var box = $('.box');
+var isGreen = box.hasClass('green');
+if(isGreen) {
+    console.log('O elemento .box é verde.');
+}else {
+    console.log('O elemento .box NÃO é verde.');
+}
+```
+@[1](Selecionando o elemento com classe **box**.)
+@[2](O elemento não tem a classe **green**, portanto o método **hasClass** retorna **false**. O valor é armazenado na variavel **isGreen**.)
+@[5-7](**isGreen** é false, portanto a somente o que tem no bloco **else** é executado. A mensagem **O elemento .box NÃO é verde.** deve aperecer no console.)
+
++++
+@title[append]
+###### O método append permite a adição de conteúdo no final de um elemento
+
++++
+@title[append html]
+
+```html
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+```
+
++++
+@title[append javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.append('Esse texto deve aparecer no final da elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo no final da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[append html result]
+
+O resultado será:
+```html
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+    Esse texto deve aparecer no final da elemento <a href="#"> bem como esse link</a>
+</div>
+```
+
++++
+@title[prepend]
+###### O método prepend permite a adição de conteúdo no inicio de um elemento
+
++++
+@title[prepend html]
+
+```html
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+```
+
++++
+@title[prepend javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.prepend('Esse texto deve aparecer no inicio da elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo no inicio da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[prepend html result]
+
+O resultado será:
+```html
+<div id="main-content">
+    Esse texto deve aparecer no inicio da elemento <a href="#"> bem como esse link</a>
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+```
+
++++
+@title[before]
+###### O método before permite a adição de conteúdo no antes de um elemento
+
++++
+@title[before html]
+
+```html
+<p>Um parágrafo antes da div</p>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+<p>Um parágrafo depois da div</p>
+```
+
++++
+@title[before javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.before('Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo no antes da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[before html result]
+
+O resultado será:
+```html
+<p>Um parágrafo antes da div</p>
+Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+<p>Um parágrafo depois da div</p>
+```
+
++++
+@title[after]
+###### O método after permite a adição de conteúdo no depois de um elemento
+
++++
+@title[after html]
+
+```html
+<p>Um parágrafo antes da div</p>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+<p>Um parágrafo depois da div</p>
+```
+
++++
+@title[after javascript]
+
+```javascript
+var mainContent = $('#main-content');
+mainContent.after('Esse texto deve aparecer depois do elemento <a href="#"> bem como esse link</a>');
+```
+@[2](Adicionando conteúdo depois da div. Esse conteúdo pode ser uma string ou um elemento.)
+
++++
+@title[after html result]
+
+O resultado será:
+```html
+<p>Um parágrafo antes da div</p>
+<div id="main-content">
+    <h1>Apenas um cabeçalho</h1>
+    <p>Uma tag p</p>
+</div>
+Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
+<p>Um parágrafo depois da div</p>
+```
+
+---
+### Dimensões
+@title[dimensions]
+![Press Down Key](assets/down-arrow.png)
+
++++
+@title[dimensions explained]
+###### O jQuery possui um conjunto de métodos para trabalharmos com as dimensões dos elementos. Com esses métodos é possivel pegar ou editar o tamanho de elementos.
+
++++
+@title[dimensions explained image]
+###### [Dimensões](https://www.w3schools.com/Jquery/jquery_dimensions.asp)
+
+![Dimensões dos elementos](assets/img_jquerydim.gif)
 
 ---
 
