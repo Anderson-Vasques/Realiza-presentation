@@ -846,6 +846,21 @@ Esse texto deve aparecer antes da elemento <a href="#"> bem como esse link</a>
 ```
 
 ---
+### Dimensões
+@title[dimensions]
+![Press Down Key](assets/down-arrow.png)
+
++++
+@title[dimensions explained]
+###### O jQuery possui um conjunto de métodos para trabalharmos com as dimensões dos elementos. Com esses métodos é possivel pegar ou editar o tamanho de elementos.
+
++++
+@title[dimensions explained image]
+###### [Dimensões](https://www.w3schools.com/Jquery/jquery_dimensions.asp)
+
+![Dimensões dos elementos](assets/img_jquerydim.gif)
+
+---
 
 ### Aprenda mais:
 ###### Links de referência [w3c jquery](https://www.w3schools.com/Jquery/default.asp), [jQuery](https://jquery.com/ ), [CSS](https://www.w3schools.com/css/default.asp), [CSS Maujor](http://www.maujor.com/tutorial/intrtut.php), [Exemplos](https://github.com/Anderson-Vasques/Realiza-exemplos) e [NOTAS DE AULA](https://github.com/Anderson-Vasques/Realiza-exemplos/blob/master/Notas%20de%20aula.txt)
